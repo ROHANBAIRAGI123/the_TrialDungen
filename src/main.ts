@@ -33,3 +33,13 @@ game.scene.add(SCENE_KEYS.GAME_SCENE, GameScene);
 game.scene.add(SCENE_KEYS.UI_SCENE, UiScene);
 game.scene.add(SCENE_KEYS.GAME_OVER_SCENE, GameOverScene);
 game.scene.start(SCENE_KEYS.PRELOAD_SCENE);
+
+
+import { ref, set } from "firebase/database";
+import { database } from "./firebase/firebase";
+
+// 🔹 Firebase connection test
+set(ref(database, "connectionTest"), {
+  message: "Firebase connected successfully",
+  time: new Date().toISOString(),
+});
