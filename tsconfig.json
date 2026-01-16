@@ -1,5 +1,4 @@
 {
-	"extends": "@devshareacademy/tsconfig/tsconfig.json",
 	"compilerOptions": {
 		"outDir": "dist",
 		"typeRoots": [
