@@ -4,9 +4,9 @@ export default defineConfig(({ mode }) => {
   // Load env file from the current directory based on `mode`
   const env = loadEnv(mode, process.cwd());
 
-  // GitHub Pages serves the site under: https://<user>.github.io/<repo>/
-  // so we need a non-root base path in production builds.
-  const base = mode === 'production' ? '/the_TrialDungen/' : '/';
+  // Use root base path for Vercel deployment
+  // For GitHub Pages, you would use: '/the_TrialDungen/'
+  const base = '/';
 
   return {
     base,
